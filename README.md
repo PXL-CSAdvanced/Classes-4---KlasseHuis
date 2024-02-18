@@ -1,6 +1,6 @@
 # KlasseHuis
 
-Maak een venster **FrmHuis** om (maximum 2) huisobjecten, nl. huis1 en
+Maak een venster **Huis** om (maximum 2) huisobjecten, nl. huis1 en
 huis2 te creëren en de gegevens van die huisobjecten te tonen.
 
 Je maakt voor deze toepassing eerst de (basis)klasse **Huis** met
