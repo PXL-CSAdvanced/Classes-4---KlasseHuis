@@ -76,7 +76,7 @@ Het venster bevat (+ enkele labels):
     van een huisobject getoond (bij drukken van de knoppen btnTonen1 en
     btnTonen2).
 
--   BtnCreatie1 en btnCreatie2: deze knoppen dienen voor de creatie van
+-   BtnCreatie1 en BtnCreatie2: deze knoppen dienen voor de creatie van
     respectievelijk een object huis1 en huis2. Gebruik in het ene geval
     de constructor zonder argumenten en in het andere geval de
     constructor met argumenten.
@@ -86,14 +86,18 @@ Het venster bevat (+ enkele labels):
     het "oude" object huis1 gewist en er wordt een nieuw object met
     diezelfde naam gemaakt).
 
--   BtnVerhogen1 en btnVerhogen2: bij het drukken van deze knoppen wordt
+-   BtnVerhogen1 en BtnVerhogen2: bij het drukken van deze knoppen wordt
     het aantal verdiepingen van respectievelijk het object huis1 en
-    huis2 verhoogd met 1 verhoogd.
+    huis2 met 1 verhoogd.
 
 -   BtnMeerdereVerhogingen1 en BtnMeerderVerhogingen2: bij het drukken
     van deze knoppen wordt het aantal verdiepingen van respectievelijk
     het object huis1 en huis2 verhoogd met een door de gebruiker
     ingegeven waarde verhoogd. (in te geven met een InputBox).
+
+-   BtnVerlagen1 en BtnVerlagen2: bij het drukken van deze knoppen wordt
+    het aantal verdiepingen van respectievelijk het object huis1 en
+    huis2 met 1 verlaagd.
 
 -   BtnTonen1 en BtnTonen2: bij het drukken van deze knoppen worden de
     gegevens van respectievelijk de objecten huis1 en huis2 getoond in
@@ -125,7 +129,7 @@ private Huis huis4;
 Na de creatie van huis1 voeg je instructie "huis3 = huis1;" toe. Na de
 creatie van huis2 voeg je instructie "huis4 = huis2;" toe.
 
-Voeg ten slotte ook de 2 opdrachtknoppen btnTonen3 en btnTonen4 toe.
+Voeg ten slotte ook de 2 opdrachtknoppen BtnTonen3 en BtnTonen4 toe.
 Test de werking uit. Wat stel je vast?
 
 ![Afbeelding met tekst, schermopname, software, nummer Automatisch
