@@ -69,10 +69,10 @@ Het venster bevat (+ enkele labels):
     creëren huisobject.
 
 -   GrpType: een groepsvak met stackpanel om het type van een te creëren
-    huisobject te bepalen door middel van de keuzerondjes radOpen,
-    radHalfopen en radGesloten.
+    huisobject te bepalen door middel van de keuzerondjes RadOpen,
+    RadHalfopen en RadGesloten.
 
--   TxtResulaat (niet ingeschakeld). In dit tekstvak wordt de informatie
+-   TxtResulaat (niet wijzigbaar). In dit tekstvak wordt de informatie
     van een huisobject getoond (bij drukken van de knoppen btnTonen1 en
     btnTonen2).
 
