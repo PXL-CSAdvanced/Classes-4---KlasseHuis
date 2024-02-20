@@ -51,7 +51,7 @@ De klasse Huis bevat volgende [methods]:
     verdiepingen en met 2,5). -- zou ook met een read-only property
     kunnen.
 
-Bij de start van het programma, wordt het venster FrmHuis getoond:.
+Bij de start van het programma, wordt het venster Huis getoond:.
 
 ![Afbeelding met tekst, schermopname, software, scherm Automatisch
 gegenereerde
