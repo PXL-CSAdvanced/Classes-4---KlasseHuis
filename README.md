@@ -140,73 +140,74 @@ beschrijving](./media/image2.png)
 ### XAML
 ```
  <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0">
-            <GroupBox Header="Gegevens" Margin="10">
-            <Grid Margin="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Label Content="Locatie" Grid.Column="0" Grid.Row="0"/>
-                <Label Content="Lengte" Grid.Column="0" Grid.Row="1"/>
-                <Label Content="Breedte" Grid.Column="0" Grid.Row="2"/>
-                <Label Content="Verdiepingen" Grid.Column="0" Grid.Row="3"/>
-                <TextBox Grid.Row="0" Grid.Column="1" Margin="10" x:Name="locationTextBox"/>
-                <TextBox Grid.Row="1" Grid.Column="1" Margin="10" x:Name="lengthTextBox"/>
-                <TextBox Grid.Row="2" Grid.Column="1" Margin="10" x:Name="widthTextBox"/>
-                <TextBox Grid.Row="3" Grid.Column="1" Margin="10" x:Name="floorsTextBox"/>
-            </Grid>
-            </GroupBox>
-            <GroupBox Header="Type bebouwing" Margin="10">
-                <StackPanel>
-                    <RadioButton Content="Open" Margin="10" x:Name="openRadioButton"/>
-                    <RadioButton Content="Halfopen" Margin="10" x:Name="halfOpenRadioButton"/>
-                    <RadioButton Content="Gesloten" Margin="10" x:Name="geslotenRadioButton"/>
-                </StackPanel>
-            </GroupBox>
-            <TextBox x:Name="resultTextBox" Margin="10" Height="200" IsEnabled="False"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1">
-            <GroupBox Header="Huis 1" Margin="10">
-                <StackPanel>
-                    <Button Content="Creatie" Margin="10" x:Name="createHome1Button" Click="createHome1Button_Click"/>
-                    <Button Content="Verdieping +1" Margin="10" x:Name="increaseFloors1Button" Click="increaseFloors1Button_Click"/>
-                    <Button Content="Verdieping +?" Margin="10" x:Name="increaseMultipleFloors1Button" Click="increaseMultipleFloors1Button_Click"/>
-                    <Button Content="Verdieping -1" Margin="10" x:Name="decreaseFloors1Button" Click="decreaseFloors1Button_Click"/>
-                    <Button Content="Gegevens" Margin="10" x:Name="showHome1Button" Click="showHome1Button_Click"/>
-                </StackPanel>
-            </GroupBox>
-            <GroupBox Header="Huis 3" Margin="10">
-                <Button Content="Gegevens" Margin="10" x:Name="showHome3Button" Click="showHome3Button_Click"/>
-            </GroupBox>
-            <GroupBox Header="Acties" Margin="10">
-                <Button Content="Wissen" Margin="10" x:Name="clearButton" Click="clearButton_Click"/>
-            </GroupBox>
-        </StackPanel>
-        <StackPanel Grid.Column="2">
-            <GroupBox Header="Huis 2" Margin="10">
-                <StackPanel>
-                    <Button Content="Creatie" Margin="10" x:Name="createHome2Button" Click="createHome2Button_Click"/>
-                    <Button Content="Verdieping +1" Margin="10" x:Name="increaseFloors2Button" Click="increaseFloors2Button_Click"/>
-                    <Button Content="Verdieping +?" Margin="10" x:Name="increaseMultipleFloors2Button" Click="increaseMultipleFloors2Button_Click"/>
-                    <Button Content="Verdieping -1" Margin="10" x:Name="decreaseFloors2Button" Click="decreaseFloors2Button_Click"/>
-                    <Button Content="Gegevens" Margin="10" x:Name="showHome2Button" Click="showHome2Button_Click"/>
-                </StackPanel>
-            </GroupBox>
-            <GroupBox Header="Huis 4" Margin="10">
-                <Button Content="Gegevens" Margin="10"  x:Name="showHome4Button" Click="showHome4Button_Click"/>
-            </GroupBox>
-        </StackPanel>
-    </Grid>
-    ```
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <StackPanel Grid.Column="0">
+        <GroupBox Header="Gegevens" Margin="10">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Locatie" Grid.Column="0" Grid.Row="0"/>
+            <Label Content="Lengte" Grid.Column="0" Grid.Row="1"/>
+            <Label Content="Breedte" Grid.Column="0" Grid.Row="2"/>
+            <Label Content="Verdiepingen" Grid.Column="0" Grid.Row="3"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="10" x:Name="locationTextBox"/>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="10" x:Name="lengthTextBox"/>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="10" x:Name="widthTextBox"/>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="10" x:Name="floorsTextBox"/>
+        </Grid>
+        </GroupBox>
+        <GroupBox Header="Type bebouwing" Margin="10">
+            <StackPanel>
+                <RadioButton Content="Open" Margin="10" x:Name="openRadioButton"/>
+                <RadioButton Content="Halfopen" Margin="10" x:Name="halfOpenRadioButton"/>
+                <RadioButton Content="Gesloten" Margin="10" x:Name="geslotenRadioButton"/>
+            </StackPanel>
+        </GroupBox>
+        <TextBox x:Name="resultTextBox" Margin="10" Height="200" IsEnabled="False"/>
+    </StackPanel>
+    <StackPanel Grid.Column="1">
+        <GroupBox Header="Huis 1" Margin="10">
+            <StackPanel>
+                <Button Content="Creatie" Margin="10" x:Name="createHome1Button" Click="createHome1Button_Click"/>
+                <Button Content="Verdieping +1" Margin="10" x:Name="increaseFloors1Button" Click="increaseFloors1Button_Click"/>
+                <Button Content="Verdieping +?" Margin="10" x:Name="increaseMultipleFloors1Button" Click="increaseMultipleFloors1Button_Click"/>
+                <Button Content="Verdieping -1" Margin="10" x:Name="decreaseFloors1Button" Click="decreaseFloors1Button_Click"/>
+                <Button Content="Gegevens" Margin="10" x:Name="showHome1Button" Click="showHome1Button_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Huis 3" Margin="10">
+            <Button Content="Gegevens" Margin="10" x:Name="showHome3Button" Click="showHome3Button_Click"/>
+        </GroupBox>
+        <GroupBox Header="Acties" Margin="10">
+            <Button Content="Wissen" Margin="10" x:Name="clearButton" Click="clearButton_Click"/>
+        </GroupBox>
+    </StackPanel>
+    <StackPanel Grid.Column="2">
+        <GroupBox Header="Huis 2" Margin="10">
+            <StackPanel>
+                <Button Content="Creatie" Margin="10" x:Name="createHome2Button" Click="createHome2Button_Click"/>
+                <Button Content="Verdieping +1" Margin="10" x:Name="increaseFloors2Button" Click="increaseFloors2Button_Click"/>
+                <Button Content="Verdieping +?" Margin="10" x:Name="increaseMultipleFloors2Button" Click="increaseMultipleFloors2Button_Click"/>
+                <Button Content="Verdieping -1" Margin="10" x:Name="decreaseFloors2Button" Click="decreaseFloors2Button_Click"/>
+                <Button Content="Gegevens" Margin="10" x:Name="showHome2Button" Click="showHome2Button_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Huis 4" Margin="10">
+            <Button Content="Gegevens" Margin="10"  x:Name="showHome4Button" Click="showHome4Button_Click"/>
+        </GroupBox>
+    </StackPanel>
+</Grid>
+
+```
