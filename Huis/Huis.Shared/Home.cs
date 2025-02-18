@@ -1,4 +1,6 @@
-﻿namespace Huis.Shared
+﻿using System.Text;
+
+namespace Huis.Shared
 {
     public class Home
     {
@@ -50,10 +52,28 @@
 			get { return _type; }
 			set { _type = value; }
 		}
-        #endregion
 
-        #region Constructors
-        public Home()
+		public string TypeDescription
+		{
+			get 
+			{ 
+				switch(this.Type)
+				{
+					case 'O':
+						return "Open bebouwing";
+					case 'H':
+						return "Halfopen bebouwing";
+					case 'G':
+						return "Gesloten bebouwing";
+					default:
+						return string.Empty;
+				}
+			}
+		}
+		#endregion
+
+		#region Constructors
+		public Home()
         {
 			_location = string.Empty;
 			_length = 0;
@@ -92,6 +112,20 @@
 		{
 			return this.Length * this.Width * (2.5 * this.NumberOfFloors);
 		}
+
+		public string GetDescription()
+		{
+			StringBuilder sb = new StringBuilder();
+			sb.AppendLine(this.Location);
+			sb.AppendLine(this.TypeDescription);
+			sb.AppendLine("Lengte: " + this.Length.ToString("N2"));
+            sb.AppendLine("Breedte: " + this.Width.ToString("N2"));
+            sb.AppendLine("Verdiepingen: " + this.NumberOfFloors.ToString());
+			sb.AppendLine("Oppervlakte: " + this.GetSurface().ToString("N2") + "m²");
+			sb.AppendLine("Inhoud: " + this.GetVolume().ToString("N2") + "m³");
+
+			return sb.ToString();
+        }
         #endregion
     }
 }
