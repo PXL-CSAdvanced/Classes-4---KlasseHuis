@@ -114,7 +114,7 @@ Test de werking uit. Wat stel je vast?
 
 ![Afbeelding met tekst, schermopname, software, nummer Automatisch
 gegenereerde
-beschrijving](./media/image2.png)
+beschrijving](./media/example.png)
 
 ### XAML
 Hoewel deze oefening een prima herhaling is om je XAML skills te testen kan je ook gebruik maken van onderstaande snippet.
