@@ -20,6 +20,26 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
+    private char GetSelectedBuildingType()
+    {
+        if (openRadioButton.IsChecked == true)
+        {
+            return 'O';
+        }
+        else if (halfOpenRadioButton.IsChecked == true)
+        {
+            return 'H';
+        }
+        else if (geslotenRadioButton.IsChecked == true)
+        {
+            return 'G';
+        }
+        else
+        {
+            throw new ApplicationException("Geen type geselecteerd");
+        }
+    }
+
     private void createHome1Button_Click(object sender, RoutedEventArgs e)
     {
         try
@@ -30,19 +50,11 @@ public partial class MainWindow : Window
             _huis1.Length = double.Parse(lengthTextBox.Text);
             _huis1.Width = double.Parse(widthTextBox.Text);
             _huis1.NumberOfFloors = int.Parse(floorsTextBox.Text);
-
-            if(openRadioButton.IsChecked == true)
-            {
-                _huis1.Type = 'O';
-            }
-            else if (halfOpenRadioButton.IsChecked == true)
-            {
-                _huis1.Type = 'H';
-            }
-            else if (geslotenRadioButton.IsChecked == true)
-            {
-                _huis1.Type = 'G';
-            }
+            _huis1.Type = GetSelectedBuildingType();
+        }
+        catch (ApplicationException ex)
+        {
+            MessageBox.Show(ex.Message);
         }
         catch (Exception)
         {
@@ -52,15 +64,16 @@ public partial class MainWindow : Window
 
     private void increaseFloors1Button_Click(object sender, RoutedEventArgs e)
     {
-        //NullForgivenOperator
+        //Null Conditional Operator (?.)
+        //https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-
+        
         _huis1?.IncreaseNumberOfFloors();
 
+        //is de verkorte schrijfwijze voor:
         //if (_huis1 is not null)
         //{
         //    _huis1.IncreaseNumberOfFloors();
         //}
-
-      
     }
 
     private void increaseMultipleFloors1Button_Click(object sender, RoutedEventArgs e)
@@ -93,34 +106,22 @@ public partial class MainWindow : Window
     {
         try
         {
-            char type = 'O';
-            if (openRadioButton.IsChecked == true)
-            {
-                type = 'O';
-            }
-            else if (halfOpenRadioButton.IsChecked == true)
-            {
-                type = 'H';
-            }
-            else if (geslotenRadioButton.IsChecked == true)
-            {
-                type = 'G';
-            }
-
             _huis2 = new Home(
                 locationTextBox.Text,
                 double.Parse(lengthTextBox.Text),
                 double.Parse(widthTextBox.Text),
                 uint.Parse(floorsTextBox.Text),
-                type);
+                GetSelectedBuildingType());
             _huis4 = _huis2;
+        }
+        catch(ApplicationException ex)
+        {
+            MessageBox.Show(ex.Message);
         }
         catch (Exception)
         {
             MessageBox.Show("Vul eerst alle gegevens in.");
         }
-
-
     }
 
     private void increaseFloors2Button_Click(object sender, RoutedEventArgs e)
@@ -140,7 +141,7 @@ public partial class MainWindow : Window
 
     private void decreaseFloors2Button_Click(object sender, RoutedEventArgs e)
     {
-        _huis2.DecreaseNumberOfFloors();
+        _huis2?.DecreaseNumberOfFloors();
     }
 
     private void showHome2Button_Click(object sender, RoutedEventArgs e)
@@ -186,5 +187,10 @@ public partial class MainWindow : Window
         resultTextBox.Clear();
 
         locationTextBox.Focus();
+
+        _huis1 = null;
+        _huis2 = null;
+        _huis3 = null;
+        _huis4 = null;
     }
 }

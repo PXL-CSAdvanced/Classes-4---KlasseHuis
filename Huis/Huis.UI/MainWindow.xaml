@@ -37,7 +37,7 @@
             </GroupBox>
             <GroupBox Header="Type bebouwing" Margin="10">
                 <StackPanel>
-                    <RadioButton Content="Open" Margin="10" x:Name="openRadioButton"/>
+                    <RadioButton Content="Open" IsChecked="True" Margin="10" x:Name="openRadioButton"/>
                     <RadioButton Content="Halfopen" Margin="10" x:Name="halfOpenRadioButton"/>
                     <RadioButton Content="Gesloten" Margin="10" x:Name="geslotenRadioButton"/>
                 </StackPanel>

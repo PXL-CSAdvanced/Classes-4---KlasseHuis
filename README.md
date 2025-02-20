@@ -53,9 +53,7 @@ De klasse Huis bevat volgende [methods]:
 
 Bij de start van het programma, wordt het venster Huis getoond:.
 
-![Afbeelding met tekst, schermopname, software, scherm Automatisch
-gegenereerde
-beschrijving](./media/image1.png)
+![voorbeeld van een leeg venster](./media/emptywindow.png)
 
 Het venster bevat (+ enkele labels):
 
@@ -132,9 +130,7 @@ creatie van huis2 voeg je instructie "huis4 = huis2;" toe.
 Voeg ten slotte ook de 2 opdrachtknoppen BtnTonen3 en BtnTonen4 toe.
 Test de werking uit. Wat stel je vast?
 
-![Afbeelding met tekst, schermopname, software, nummer Automatisch
-gegenereerde
-beschrijving](./media/image2.png)
+![voorbeeld van een ingevuld venster](./media/example.png)
 
 
 ### XAML
